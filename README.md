@@ -1,5 +1,6 @@
 Source code pertemuan 2
 
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,5 +126,8 @@ Source code pertemuan 2
         saya untuk melihat informasi lebih lanjut.</p>
 
 </body>
+</html>
+```
+
 </html>
 
