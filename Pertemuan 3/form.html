@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            height: 100vh;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            max-width: 400px;
+            width: 100%;
+            margin: 40px auto 0 auto;
+            padding: 30px 40px 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            margin: 6px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background: #35e67b;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #306acb;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #35e67B;">Registration Form</h1>
+    <form action="/submit" method="post">
+        <label>First Name</label><br>
+        <input type="text" required><br>
+
+        <label>Last Name</label><br>
+        <input type="text" required><br>
+
+        <label>Email</label><br>
+        <input type="email" required><br>
+
+        <label>Password</label><br>
+        <input type="password" required><br>
+
+        <label>Re-type Password</label><br>
+        <input type="password" required><br>
+        
+        <label>Contact</label><br>
+        <input type="text" required><br>
+
+        <label>Gender</label><br>
+        <select name="Gender">
+            <option value="M"> Male </option>
+            <option value="F"> Female </option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
