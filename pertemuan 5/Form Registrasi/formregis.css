@@ -60,7 +60,6 @@ input[type="submit"]:hover {
     background: #306acb;
 }
 
-/* Dropdown suggestion */
 #suggestions {
     position: absolute;
     background: #fff;
@@ -82,7 +81,6 @@ input[type="submit"]:hover {
     background: #f0f0f0;
 }
 
-/* Popup */
 .popup {
     position: fixed;
     top: 0; left: 0;
@@ -124,4 +122,5 @@ input[type="submit"]:hover {
 
 .error {
     color: red;
+
 }
