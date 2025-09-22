@@ -1,82 +1,128 @@
 const data = {
-  "DKI Jakarta": {
-    "Jakarta Selatan": {
-      "Kebayoran Baru": "12120",
-      "Pasar Minggu": "12510"
-    },
-    "Jakarta Barat": {
-      "Grogol Petamburan": "11450",
-      "Cengkareng": "11730"
-    }
-  },
-  "Jawa Barat": {
-    "Bandung": {
-      "Coblong": "40132",
-      "Lengkong": "40261"
-    },
-    "Bekasi": {
-      "Bekasi Timur": "17111",
-      "Bekasi Barat": "17131"
-    }
-  },
-  "Jawa Tengah": {
-    "Semarang": {
-      "Tembalang": "50275",
-      "Pedurungan": "50192"
-    },
-    "Solo": {
-      "Banjarsari": "57131",
-      "Laweyan": "57148"
-    }
-  },
   "Jawa Timur": {
     "Surabaya": {
-      "Wonokromo": "60243",
-      "Tegalsari": "60262"
+      "Wonokromo": {
+        "Darmo": "60241",
+        "Jagir": "60242",
+        "Ngagel": "60246"
+      },
+      "Tegalsari": {
+        "Kedungdoro": "60261",
+        "Dr. Sutomo": "60264",
+        "Keputran": "60265"
+      }
     },
     "Malang": {
-      "Klojen": "65111",
-      "Lowokwaru": "65141"
+      "Klojen": {
+        "Oro-Oro Dowo": "65119",
+        "Klojen": "65111",
+        "Kasin": "65117"
+      },
+      "Lowokwaru": {
+        "Dinoyo": "65144",
+        "Ketawanggede": "65145",
+        "Tlogomas": "65144"
+      }
     }
   },
+
   "Bali": {
     "Denpasar": {
-      "Denpasar Barat": "80119",
-      "Denpasar Timur": "80237"
-    },
-    "Badung": {
-      "Kuta": "80361",
-      "Mengwi": "80351"
+      "Denpasar Barat": {
+        "Padangsambian": "80117",
+        "Pemecutan": "80119"
+      },
+      "Denpasar Timur": {
+        "Kesiman": "80237",
+        "Sumerta": "80235"
+      }
     }
   },
-  "Sumatera Utara": {
-    "Medan": {
-      "Medan Tuntungan": "20136",
-      "Medan Timur": "20231"
+
+  "DKI Jakarta": {
+    "Jakarta Selatan": {
+      "Kebayoran Baru": {
+        "Gandaria Utara": "12140",
+        "Senayan": "12190"
+      },
+      "Tebet": {
+        "Manggarai": "12850",
+        "Tebet Barat": "12810"
+      }
     },
-    "Binjai": {
-      "Binjai Kota": "20741",
-      "Binjai Selatan": "20732"
+    "Jakarta Timur": {
+      "Cakung": {
+        "Penggilingan": "13940",
+        "Jatinegara": "13930"
+      }
     }
   },
+
+  "Jawa Tengah": {
+    "Semarang": {
+      "Semarang Tengah": {
+        "Miroto": "50134",
+        "Pandansari": "50139"
+      },
+      "Tembalang": {
+        "Tembalang": "50275",
+        "Bulusan": "50277"
+      }
+    },
+    "Solo": {
+      "Banjarsari": {
+        "Gilingan": "57134",
+        "Keprabon": "57131"
+      }
+    }
+  },
+
+  "Jawa Barat": {
+    "Bandung": {
+      "Coblong": {
+        "Dago": "40135",
+        "Lebak Gede": "40132"
+      },
+      "Lengkong": {
+        "Cikawao": "40261",
+        "Malabar": "40262"
+      }
+    },
+    "Bekasi": {
+      "Bekasi Timur": {
+        "Aren Jaya": "17111",
+        "Bekasi Jaya": "17112"
+      },
+      "Bekasi Barat": {
+        "Kranji": "17135",
+        "Bintara": "17134"
+      }
+    }
+  },
+
   "Kalimantan Selatan": {
     "Banjarmasin": {
-      "Banjarmasin Barat": "70111",
-      "Banjarmasin Timur": "70236"
-    },
-    "Banjarbaru": {
-      "Banjarbaru Utara": "70711",
-      "Banjarbaru Selatan": "70714"
+      "Banjarmasin Tengah": {
+        "Teluk Dalam": "70117",
+        "Kertak Baru Ilir": "70111"
+      },
+      "Banjarmasin Barat": {
+        "Belitung Selatan": "70116",
+        "Telawang": "70112"
+      }
     }
   },
+
   "Sulawesi Selatan": {
     "Makassar": {
-      "Ujung Pandang": "90111",
-      "Panakkukang": "90231"
-    },
-    "Gowa": {
-      "Somba Opu": "92111",
-      "Bontomarannu": "92171"
+      "Ujung Pandang": {
+        "Losari": "90112",
+        "Mangkura": "90113"
+      },
+      "Panakkukang": {
+        "Karampuang": "90231",
+        "Paropo": "90233"
+      }
     }
   }
 };
@@ -131,8 +177,13 @@ document.getElementById("cari").addEventListener("click", () => {
   let kec = kecamatanSelect.value;
 
   if (prov && kab && kec) {
-    let kode = data[prov][kab][kec];
-    hasilDiv.innerHTML = `Kode Pos: <span style="color:#2193b0">${kode}</span>`;
+    let kelurahanList = data[prov][kab][kec];
+    let listHTML = `<h3>Daftar Kelurahan di ${kec}:</h3><ul>`;
+    Object.keys(kelurahanList).forEach(kel => {
+      listHTML += `<li><b>${kel}:</b> ${kelurahanList[kel]}</li>`;
+    });
+    listHTML += "</ul>";
+    hasilDiv.innerHTML = listHTML;
     hasilDiv.classList.remove("hidden");
   } else {
     hasilDiv.innerHTML = "Lengkapi Pilihan Anda";
