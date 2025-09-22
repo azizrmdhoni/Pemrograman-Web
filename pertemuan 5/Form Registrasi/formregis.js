@@ -33,7 +33,6 @@ namaInput.addEventListener("input", function(){
     suggestionBox.style.display = "block";
 });
 
-// Popup
 function showPopup(message, type){
     const popup = document.getElementById("popup");
     const popupMessage = document.getElementById("popup-message");
@@ -55,7 +54,6 @@ function closePopup(){
     document.getElementById("popup").style.display = "none";
 }
 
-// Validasi form
 document.getElementById("regForm").addEventListener("submit", function(e){
     e.preventDefault();
     const nama = namaInput.value.trim();
@@ -70,3 +68,4 @@ document.getElementById("regForm").addEventListener("submit", function(e){
 
     showPopup("Registrasi berhasil!", "success");
 });
+
