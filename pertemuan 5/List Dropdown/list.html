@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Dropdown Produk Elektronik</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛍️ Pilih Produk Elektronik</h1>
+        
+        <div class="form-group">
+            <label for="kategori">Kategori Produk:</label>
+            <div class="dropdown-container">
+                <select id="kategori">
+                    <option value="">-- Pilih Kategori --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" id="merekGroup" style="display: none;">
+            <label for="merek">Merek:</label>
+            <div class="dropdown-container">
+                <select id="merek">
+                    <option value="">-- Pilih Merek --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" id="produkGroup" style="display: none;">
+            <label for="produk">Produk:</label>
+            <div class="dropdown-container">
+                <select id="produk">
+                    <option value="">-- Pilih Produk --</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+</html>
