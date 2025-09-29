@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+  <title>Halaman Konten</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #4e54c8, #8f94fb);
+      color: white;
+    }
+    nav {
+      background: #343a40;
+    }
+    nav a {
+      color: #fff !important;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffc107 !important;
+    }
+    main {
+      flex: 1;
+      overflow: hidden;
+    }
+    .sidebar-card, .content-card {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .btn-learn {
+      background-color: #0d6efd;
+      color: white;
+    }
+    .btn-start {
+      background-color: #198754;
+      color: white;
+    }
+    footer {
+      background-color: #212529;
+      color: #bbb;
+    }
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="py-3 shadow-sm">
+    <div class="container">
+      <h2 class="fw-bold mb-0">Header</h2>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="nav py-2">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container d-flex align-items-stretch py-4">
+    <div class="row flex-grow-1 w-100 g-4">
+      <aside class="col-md-3 d-flex flex-column">
+        <div class="p-3 mb-3 rounded sidebar-card flex-fill">
+          <h5 class="fw-bold">Menu Item 1</h5>
+          <p class="mb-0 text-muted">Quick navigation option</p>
+        </div>
+        <div class="p-3 mb-3 rounded sidebar-card flex-fill">
+          <h5 class="fw-bold">Menu Item 2</h5>
+          <p class="mb-0 text-muted">Another useful link</p>
+        </div>
+        <div class="p-3 rounded sidebar-card flex-fill">
+          <h5 class="fw-bold">Menu Item 3</h5>
+          <p class="mb-0 text-muted">Additional resources</p>
+        </div>
+      </aside>
+
+      <section class="col-md-9 d-flex flex-column">
+        <div class="row g-4 flex-grow-1">
+          <div class="col-md-6">
+            <div class="p-3 rounded content-card h-100">
+              <h5 class="fw-bold">Feature 1</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+              <a href="#" class="btn btn-learn">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 rounded content-card h-100">
+              <h5 class="fw-bold">Feature 2</h5>
+              <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+              <a href="#" class="btn btn-start">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-3 mt-3 rounded content-card flex-fill">
+          <h5 class="fw-bold">Main Article</h5>
+          <p class="text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <h6 class="fw-bold text-white">Footer</h6>
+        <p class="mb-0">© 2024 Your Company. All rights reserved.</p>
+      </div>
+      <div>
+        <a href="#" class="me-3">Privacy</a>
+        <a href="#" class="me-3">Terms</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
