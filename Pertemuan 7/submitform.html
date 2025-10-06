@@ -1,40 +1,38 @@
 <!DOCTYPE html>
+<html lang="id">
 <head>
-    <title>Submit Form Without Page Refresh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
     <link rel="stylesheet" href="submitform.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="submitform.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>Submit Form Without Page Refresh</h1>
         
-        <form id="submitform">
+        <form id="contactForm">
             <div class="form-group">
                 <label for="nama">Name:</label>
-                <input id="nama" required>
+                <input type="text" id="nama">
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
-                <input id="email" required>
+                <input type="email" id="email">
             </div>
 
             <div class="form-group">
                 <label for="pesan">Message:</label>
-                <textarea id="pesan" required></textarea>
+                <textarea id="pesan"></textarea>
             </div>
 
             <button type="submit" class="btn-submit">Submit</button>
+            <div class="message_box" style="display: none;"></div>
+
         </form>
-
-        <div class="success-message" id="successMsg">
-            Thank you for contacting us, we will get back to you shortly.
-        </div>
-
-        <div class="error-message" id="errorMsg">
-            Something went wrong. Please try again.
-        </div>
     </div>
+
+    <script src="submitform.js"></script>
 </body>
 </html>
